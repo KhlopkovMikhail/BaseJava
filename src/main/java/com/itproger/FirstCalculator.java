@@ -1,3 +1,4 @@
+// Первый калькулятор
 package com.itproger;
 
 import java.util.Scanner;
