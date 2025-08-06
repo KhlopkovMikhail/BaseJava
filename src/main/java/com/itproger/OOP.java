@@ -5,7 +5,9 @@ public class OOP {
 
     public static void main(String[] args) {
 
-        OOPTransport bmw = new OOPTransport(250.5f, 2500, "White", new byte[] {0, 0, 0}); // Создание объекта используя рвнее созданный класс OOPTransport
+        Car bmw = new Car (250.5f, 2500, "White", new byte[]{0, 0, 0}); // Создание объекта используя рвнее созданный класс OOPTransport
+//        OOPTransport bmw = new OOPTransport(250.5f, 2500, "White", new byte[] {0, 0, 0}); // Создание объекта используя рвнее созданный класс OOPTransport
+
 //        bmw.setValues(250.5f, 2500, "White", new byte[] {0, 0, 0});
 //        String res1 = bmw.getValues();
 //        System.out.println(res1);
@@ -14,7 +16,10 @@ public class OOP {
 //        bmw.color = "White";
 //        bmw.coordinate = new byte[] {0, 0, 0};
 
-        OOPTransport truck = new OOPTransport(5600, new byte[] {100, 0, 100});
+        Track truck = new Track(5600, new byte[]{100, 0, 100}, false);
+
+        truck.setLoaded(true);
+        truck.getLoaded();
 //        OOPTransport truck = new OOPTransport();
 //        truck.speed = 140.5f;
 //        truck.weight = 5600;

@@ -10,8 +10,10 @@ public class OOPTransport { // Создание класса
     // private используется исходя из принципов инкапсуляции, чтобы доступ к параметрам был только через методы или конструкторы
     private float speed; // Созданно поле скорость
     private int weight; // Созданно поле вес
-    private String color; // Созданно поле цвет
+    protected String color; // Созданно поле цвет
     private byte[] coordinate; // Созданно поле с массивом координат
+
+//    public OOPTransport() {} // Конструктор для наследника
 
     public OOPTransport(float _speed, int _weight, String _color, byte[] _coordinate) { // Создание конструктора
         // Join to DB (Подключение к базе данных
@@ -26,15 +28,15 @@ public class OOPTransport { // Создание класса
         System.out.println(this.getValues());
     }
 
-
-    public void setValues(float speed, int weight, String color, byte[] coordinate) {
+// метод protected открывает видимость для родительского и класса наследника
+    protected void setValues(float speed, int weight, String color, byte[] coordinate) {
         this.speed = speed; //this - обращение к полям класса
         this.weight = weight;
         this.color = color;
         this.coordinate = coordinate;
     }
 
-    public String getValues() {
+    protected String getValues() {
         String info = "Object speed: " + this.speed + ". Weight: " + this.weight + ". Color: " + this.color + ".\n";
         String infoCoordinates = "Coordinates:\n";
         for (int i = 0; i < coordinate.length; i++) {
